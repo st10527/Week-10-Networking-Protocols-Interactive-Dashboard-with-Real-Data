@@ -46,6 +46,7 @@ to generate log entries before running this assignment.
 
 ```bash
 streamlit run app.py
+```
 
 Make sure log.db is in the same directory.
 
