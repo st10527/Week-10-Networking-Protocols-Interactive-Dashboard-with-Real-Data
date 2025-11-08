@@ -50,7 +50,7 @@ streamlit run app.py
 
 Make sure log.db is in the same directory.
 
-Submission Checklist
+## Submission Checklist
 
  app.py includes sidebar, filters, and refresh
 
@@ -59,8 +59,9 @@ Submission Checklist
  Screenshot of dashboard with filters
 
  Code pushed to GitHub
+ ---
 
-Bonus (Optional)
+## Bonus (Optional)
 
 Add a date filter using st.date_input
 
