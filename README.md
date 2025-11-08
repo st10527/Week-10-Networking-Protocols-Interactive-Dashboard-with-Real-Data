@@ -1,29 +1,44 @@
-# Week 9 – Dashboard with Database Query (Streamlit + SQLite)
+# Week 10 – Networking & Protocols: Interactive Dashboard
 
 ## Objective
 
-This week, you’ll connect your dashboard directly to the database created in Week 8 (`log.db`)  
-and display the stored log data using **Streamlit**.
+This week, you will enhance your Streamlit dashboard with **interactive controls** and use **real data**
+from your monitoring system (`log.db` generated in Week 7–8).
+
+---
+
+## Data Source
+
+Your dashboard uses the **same database** you created in:
+- Week 7 (SQLite Logging)
+- Week 8 (Alert System Updates)
+
+If your `log.db` file is missing or empty, please re-run your Week 8 `main.py`
+to generate log entries before running this assignment.
 
 ---
 
 ## Tasks
 
-1. Connect Streamlit to the `log.db` database.
-2. Load data from the `system_log` table into a DataFrame.
-3. Display:
-   - The latest 5 entries in a table.
-   - Line charts for CPU, Memory, and Disk.
-4. Add a filter to show only records with specific Ping_Status (e.g., “UP” or “DOWN”).
-5. Close the database connection properly.
+1. Add a **sidebar navigation menu**:
+   - Dashboard
+   - Settings
+   - About
+2. Implement **auto-refresh** or **manual refresh** button.
+3. Add **filter controls**:
+   - Ping_Status (All / UP / DOWN)
+   - CPU Threshold slider
+4. Display filtered data and charts for CPU, Memory, Disk.
+5. Include a short description on the Settings and About pages.
 
 ---
 
 ## Example Output
 
-- Table of latest 5 log entries  
-- Line chart for system usage  
-- Dropdown filter for Ping Status  
+- Sidebar with navigation
+- Filtered data table
+- Dynamic line charts
+- Refresh button or timer
 
 ---
 
@@ -31,17 +46,23 @@ and display the stored log data using **Streamlit**.
 
 ```bash
 streamlit run app.py
-```
----
 
-Make sure log.db is in the same folder as your Streamlit app.
+Make sure log.db is in the same directory.
 
-## Submission Checklist
+Submission Checklist
 
- []app.py connects to database and displays data
+ app.py includes sidebar, filters, and refresh
 
- []Charts render correctly
+ Charts render correctly
 
- []Screenshot of your dashboard
+ Screenshot of dashboard with filters
 
- []Files pushed to GitHub
+ Code pushed to GitHub
+
+Bonus (Optional)
+
+Add a date filter using st.date_input
+
+Display alert count (how many records exceeded thresholds)
+
+Add Dark Mode toggle in the Settings page
